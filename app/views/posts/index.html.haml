@@ -1,1 +1,8 @@
-%h1 index place holder
+- @posts.each do |post|
+	%h2= link_to post.title, post
+	%p
+		Publicado hace
+		= time_ago_in_words(post.created_at)
+
+
+=link_to "new", new_post_path 
